@@ -106,3 +106,15 @@ float mc_pi(int j)
     }
   return pi;
 }
+
+float wallis_pi(int j)
+{
+  float i;
+  float pi=4;
+  
+  for(i=3;i<j+2;i+=2)
+  {
+    pi=pi*((i-1)/i)*((i+1)/i);
+  }
+  return pi;  
+}
