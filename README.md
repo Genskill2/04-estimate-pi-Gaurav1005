@@ -84,3 +84,25 @@ calculating the distance between the point and `(0,0)`.
 
 You can run `make test_mc` and `make test_wallis` to check if your
 implementations are correct before you push the code.
+float mc_pi(int j)
+{
+  int c_points=0;
+  float pi=1;
+  
+  float x=frandom();
+  float y=frandom();
+  
+  double d=(pow(x,2)+pow(y,2));
+  for(int i=1;i<=j;i++)
+  {
+    float x=frandom();
+    float y=frandom();
+  
+    double d=(pow(x,2)+pow(y,2));
+    if(d<=1)
+      {c_points=c_points+1;}
+    pi=4*((float)c_points/(float)i);
+    //printf("%f\n",pi);  }
+    }
+  return pi;
+}
